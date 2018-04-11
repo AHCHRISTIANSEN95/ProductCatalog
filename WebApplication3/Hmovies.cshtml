@@ -1,0 +1,23 @@
+﻿@using ProductsLibrary;
+@{
+    Layout = "Layouts/_Master.cshtml";
+    Page.Title = "Horrors";
+    var filePath = Server.MapPath("/data/horror_movies.json");
+    var horrors = Database.GetHorror(filePath);
+
+}
+<h1>List of </h1>
+<h2>@Request["id"] - @Request["name"]</h2>
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Genre</td>
+    </tr>
+    @foreach (Horror horror in horrors)
+    {
+    <tr>
+        <td> <a href="SpecificDrama?id=@horror.Id">@horror.Name</a> </td>
+        <td>@horror.Genre</td>
+    </tr>
+    }
+</table>

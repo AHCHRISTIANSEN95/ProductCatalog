@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title - Movie List</title>
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <div style="border:1px solid red;">@Page.Test</div>
+    @RenderPage("/TopNav.cshtml")
+    <main>
+        <h1>Movie List</h1>
+        @RenderBody()
+    </main>
+    <hr />
+    <footer>
+        Copyright @DateTime.Now.Year - Andreas Christiansen
+    </footer>
+</body>
+</html>

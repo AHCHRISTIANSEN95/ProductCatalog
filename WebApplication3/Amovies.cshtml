@@ -1,0 +1,23 @@
+﻿@using ProductsLibrary;
+@{
+    Layout = "Layouts/_Master.cshtml";
+    Page.Title = "Dramas";
+    var filePath = Server.MapPath("/data/drama_movies.json");
+    var dramas = Database.GetDramas(filePath);
+
+}
+<h1>List of </h1>
+<h2>@Request["id"] - @Request["name"]</h2>
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Genre</td>
+    </tr>
+    @foreach (Drama drama in dramas)
+    {
+    <tr>
+        <td> <a href="SpecificDrama?id=@drama.Id">@drama.Name</a> </td>
+        <td>@drama.Genre</td>
+    </tr>
+    }
+</table>

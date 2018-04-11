@@ -1,0 +1,15 @@
+﻿@using ProductsLibrary;
+@{
+    Layout = "Layouts/_Master.cshtml";
+
+    int dramaId = (Request["id"] != null) ? int.Parse(Request["id"]) : 1;
+    var filePath = Server.MapPath("data/drama_movies.json");
+    var dramas = Database.GetDrama(filePath);
+    var drama = dramas.Where(d => d.Id == dramaId).Single();
+}
+<h1>Details about @drama.Name</h1>
+@drama.Name<br />
+@drama.Brand<br />
+@drama.Pegi<br />
+@drama.Genre<br />
+)<br /><br />

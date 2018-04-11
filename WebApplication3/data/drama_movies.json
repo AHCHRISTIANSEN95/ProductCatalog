@@ -1,0 +1,46 @@
+﻿/*
+  Hardcoded movies
+  */
+
+[
+  {
+    "Id": 1,
+    "Name": "Movie 1",
+    "Genre": "Drama"
+  },
+  {
+    "Id": 2,
+    "Name": "Movie 2",
+    "Genre": "Drama"
+  },
+  {
+    "Id": 3,
+    "Name": "Movie 3",
+    "Genre": "Drama"
+  },
+  {
+    "Id": 4,
+    "Name": "Movie 4",
+    "Genre": "Drama"
+  },
+  {
+    "Id": 5,
+    "Name": "Movie 5",
+    "Genre": "Drama"
+  },
+  {
+    "Id": 6,
+    "Name": "Movie 6",
+    "Genre": "Drama"
+  },
+  {
+    "Id": 7,
+    "Name": "Movie 7",
+    "Genre": "Drama"
+  },
+  {
+    "Id": 8,
+    "Name": "Movie 8",
+    "Genre": "Drama"
+  }
+]
